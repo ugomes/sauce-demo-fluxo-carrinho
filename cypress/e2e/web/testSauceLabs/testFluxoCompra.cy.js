@@ -1,18 +1,13 @@
 describe('Fluxo de compra', () => {
 
     beforeEach(() => {
-        const credenciais = Cypress.env('credenciais');
-        const usuario = credenciais.usuario;
-        const senha = credenciais.senha;
+      cy.login()  
+        
 
-        cy.viewport(1920, 1080); // Configuração de resolução
-        cy.visit('https://www.saucedemo.com/'); // Ir para a página de login
-        cy.get('[data-test="username"]').type(usuario); // Preencher dados de user
-        cy.get('[data-test="password"]').type(senha); // Preencher dados de password
-        cy.get('[data-test="login-button"]').click(); // Efetuar login
     });
  
     it('Fluxo de compra - Sucesso  ', () => {
+
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click(); // Adicionar produto ao carrinho
         cy.get('[data-test="shopping-cart-badge"]').should('be.visible') // Validar quantidade de itens no carrinho
             .and('have.text', '1'); // Validar quantidade de itens no carrinho

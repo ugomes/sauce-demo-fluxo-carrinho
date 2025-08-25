@@ -1,2 +1,8 @@
 node_modules/
-fixtures/
+screenshots/
+videos/
+cypress.env.json
+cypress/screenshots/
+cypress/videos/
+cypress-mochawesome-reporter.log
+reports/
