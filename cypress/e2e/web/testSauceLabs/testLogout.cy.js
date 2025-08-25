@@ -1,5 +1,4 @@
-import { Test } from "mocha";
-
+/// <reference types="cypress" />
 describe('Logout', () => {
 
     beforeEach(() => {
