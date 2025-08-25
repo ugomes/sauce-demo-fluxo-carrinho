@@ -17,8 +17,3 @@ describe('Logout', () => {
 
 console.log('Arquivo de teste de logout criado com sucesso');
 
-System.out.println('Arquivo de teste de logout criado com sucesso');
-
-nome = "Uelton"
-idade = 1;
-
